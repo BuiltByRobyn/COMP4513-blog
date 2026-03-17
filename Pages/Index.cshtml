@@ -4,7 +4,7 @@
     ViewData["Title"] = "Home page";
 }
 
-<h1 class="text-center">My Posts</h1>
+<h1 class="text-center">My blog posts</h1>
 
 <div class="row">
     <div class="col-md-2 d-flex flex-column gap-3">
@@ -31,6 +31,15 @@
     </div>
     
     <div class="col-md-3">
-        <h3>Categories</h3>
+        <h3 class="category-title text-center">Categories</h3>
+        @foreach(var category in Model.Categories){
+        <h5 class="category-name">@category.Name</h5>
+        <ul>
+        @foreach(var post in category.Posts){
+            <li><a asp-page="/Posts/Details" asp-route-id="@post.Id">@post.Title</a></li>
+        }
+     </ul>
+}
+
     </div>
 </div>

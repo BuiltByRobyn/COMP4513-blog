@@ -27,7 +27,7 @@ public static class DBInitializer
         List<Category> categories = new()
         {
             new Category { Id = 1, Name = "Design"},
-            new Category { Id = 2, Name = "Web Development"}
+            new Category { Id = 2, Name = "Programming"}
         };
 
 

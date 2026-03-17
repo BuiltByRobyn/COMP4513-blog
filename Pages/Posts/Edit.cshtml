@@ -14,17 +14,20 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Post.Id" />
-            <div class="form-group">
+            <input type="hidden" asp-for="Post.Id" />
+            <input type="hidden" asp-for="Post.AuthorId" />
+            <input type="hidden" asp-for="Post.CategoryId" />
+            <div class="form-group mb-3">
                 <label asp-for="Post.Title" class="control-label"></label>
                 <input asp-for="Post.Title" class="form-control" />
                 <span asp-validation-for="Post.Title" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label asp-for="Post.Content" class="control-label"></label>
                 <input asp-for="Post.Content" class="form-control" />
                 <span asp-validation-for="Post.Content" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
@@ -32,6 +35,6 @@
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="/Index">Back to List</a>
 </div>
 

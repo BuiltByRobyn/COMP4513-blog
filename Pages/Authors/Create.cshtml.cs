@@ -35,7 +35,7 @@ namespace BlogSite.Pages_Authors
                 return Page();
             }
 
-            _context.Auhors.Add(Author);
+            _context.Authors.Add(Author);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("/Index");

@@ -1,5 +1,3 @@
-using Humanizer;
-
 namespace BlogSite.Models;
 
 public class Category
