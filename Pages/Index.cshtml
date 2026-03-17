@@ -36,18 +36,17 @@
     </div>
     
     <div class="col-md-3">
-        
-        @if(Model.Categories.Count == 0){
-        <p class="text-muted">No categories yet. Please add a category.</p>
-        }
         <h3 class="category-title text-center">Categories</h3>
-        @foreach(var category in Model.Categories){
-        <h5 class="category-name">@category.Name</h5>
-        <ul>
-        @foreach(var post in category.Posts){
-            <li><a asp-page="/Posts/Details" asp-route-id="@post.Id">@post.Title</a></li>
-        }
-     </ul>
+            @if(Model.Categories.Count == 0){
+            <p class="text-muted">No categories yet. Please add a category.</p>
+            }
+            @foreach(var category in Model.Categories){
+            <h5 class="category-name">@category.Name</h5>
+            <ul>
+            @foreach(var post in category.Posts){
+                <li><a asp-page="/Posts/Details" asp-route-id="@post.Id">@post.Title</a></li>
+            }
+            </ul>
 }
 
     </div>
